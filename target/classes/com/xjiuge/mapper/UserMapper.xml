@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="userNamespace">
+	
+	<resultMap type="com.xjiuge.bean.User" id="userMap">
+		<id property="id" column="id"/>
+		<result property="userName" column="user_name" jdbcType="VARCHAR"/>
+		<result property="password" column="password" jdbcType="VARCHAR"/>
+	</resultMap>	
+	
+	<!-- 新增 -->
+	<insert id="User_insert" parameterType="com.xjiuge.bean.User">
+		insert into user(user_name,password) values(#{userName,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})
+	</insert>
+	<!-- 查询list -->
+	<select id="User_selectByWhere" resultMap="userMap" >
+		select * from user
+		<where>
+			<if test="userName!=null">
+				and user_name = #{userName,jdbcType=VARCHAR}
+			</if>
+			<if test="password!=null">
+				and password = #{password,jdbcType=VARCHAR}
+			</if>
+		</where>
+	</select>
+	<!-- 查询entity -->
+	<select id="User_getById" resultMap="userMap" parameterType="java.lang.Integer">
+		select * from user
+		<where>
+			id = #{id,jdbcType=INTEGER}
+		</where>
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
