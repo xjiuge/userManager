@@ -8,7 +8,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 @Controller
 public class BasePathInterceptor extends HandlerInterceptorAdapter {
-
+/**
+ * 项目启动时加载，得到base路径
+ */
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
 		String scheme = request.getScheme();

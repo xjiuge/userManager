@@ -24,16 +24,16 @@ public class JsonResult<T> implements Serializable{
 	}
 	
 	public static JsonResult success(){
-		return new JsonResult(200,"操作成功！");
+		return new JsonResult(200,"鎿嶄綔鎴愬姛");
 	}
 	public static JsonResult success(String msg){
 		return new JsonResult(200,msg);
 	}
 	public static JsonResult success(Object t){
-		return new JsonResult(200,"操作成功！",t);
+		return new JsonResult(200,"鎿嶄綔鎴愬姛",t);
 	}
 	public static JsonResult error(){
-		return new JsonResult(500,"操作失败！");
+		return new JsonResult(500,"鎿嶄綔澶辫触");
 	}
 	public static JsonResult error(String msg){
 		return new JsonResult(500,msg);

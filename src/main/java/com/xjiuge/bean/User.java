@@ -1,10 +1,13 @@
 package com.xjiuge.bean;
 
-
+/**
+ * 用户类
+ * @author xuhc
+ */
 public class User {
-	private Integer id;
-	private String userName;
-	private String password;
+	private Integer id;//id
+	private String userName;//用户名
+	private String password;//密码
 	public Integer getId() {
 		return id;
 	}

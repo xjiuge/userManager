@@ -8,24 +8,24 @@ import com.xjiuge.bean.User;
 public interface BaseService<T> {
 
 	/**
-	 * Ôö
+	 * å¢ž
 	 */
 	public int save(T entity);
 	/**
-	 * ²élist
+	 * æŸ¥list
 	 */
 	
 	List<T> findByPorperty(Object...str);
 	/**
-	 * ²éentity
+	 * æŸ¥entity
 	 */
 	T get(Serializable id);
 	/**
-	 * ¸Ä
+	 * æ”¹
 	 */
 	void update(T entity);
 	/**
-	 * É¾
+	 * åˆ 
 	 */
 	void delete (Serializable id);
 }

@@ -13,7 +13,7 @@ public class Md5Util {
         }
     }
 	 /**
-     * ÓÃÓÚ»ñÈ¡Ò»¸öStringµÄmd5Öµ
+     * è·å¾—ä¸€ä¸ªStringçš„md5å€¼Öµ
      * @param string
      * @return
      */
